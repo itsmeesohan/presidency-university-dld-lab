@@ -1,0 +1,28 @@
+:root{--p:#12326b;--a:#f0b429;--bg:#f3f6fb;--t:#17233c;--m:#5b6b85}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--t)}
+.top{background:var(--p);color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;padding:8px 14px;position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}.brand img{width:42px;height:42px}.brand b{display:block;font-size:1.05rem}.brand small{opacity:.8}
+nav{display:flex;flex-wrap:wrap;gap:4px}nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:99px}nav a.on,nav a:hover{background:rgba(255,255,255,.18)}nav a.pill{border:1px solid var(--a);color:var(--a)}
+main{max-width:1250px;margin:0 auto;padding:10px}.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 1px 6px #0002;margin:10px 0}
+.dev{display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--m)}.dev img{width:22px}
+.tabs{display:flex;gap:4px;margin:8px 0}.tabs button{flex:1;padding:9px;border:0;border-bottom:3px solid transparent;background:#fff;font:inherit;cursor:pointer}.tabs .on{border-color:var(--a);font-weight:700;color:var(--p)}
+.hint{background:#fff7d6;border-radius:8px;padding:6px 10px;font-size:.85rem;display:flex;justify-content:space-between}.hint button{border:0;background:none;font-size:1.2rem}
+.pane{display:none}.pane.on{display:block}.palette{display:flex;gap:6px;overflow-x:auto;padding:6px 0}
+button{font:inherit;cursor:pointer}.palette button,.tools button,.big,section>button{background:var(--p);color:#fff;border:0;border-radius:8px;padding:7px 12px;white-space:nowrap}
+.palette .g2{background:#0d6b4f}.tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}#status{font-size:.85rem;color:var(--m)}
+.wrap{overflow:auto;height:calc(100vh - 270px);min-height:360px;border-radius:12px;border:3px solid #0b1f1a;background:#0e2a22}
+svg{display:block;background-image:linear-gradient(#ffffff10 1px,transparent 1px),linear-gradient(90deg,#ffffff10 1px,transparent 1px);background-size:20px 20px}
+.body{fill:#1e293b;stroke:#64748b;stroke-width:2}.body.ic{fill:#111827}.body.sw{fill:#334155}.body.vcc{fill:#b91c1c}.body.gnd{fill:#374151}
+.comp{cursor:grab;touch-action:none}.comp.sel .body{stroke:#f0b429;stroke-width:3}
+text.t{fill:#e2e8f0;font:600 14px system-ui;text-anchor:middle;dominant-baseline:central;pointer-events:none;user-select:none}text.s{font-size:10px;fill:#94a3b8}
+.pin{fill:#64748b;stroke:#fff;stroke-width:1.5;cursor:crosshair;touch-action:none}.pin.hi{fill:#22c55e}.pin.pend{stroke:#f0b429;stroke-width:3.5}
+.wire path.v{fill:none;stroke:#60a5fa;stroke-width:3;stroke-linecap:round}.wire.hi path.v{stroke:#22c55e}.wire.sel path.v{stroke:#f0b429;stroke-width:5}.wire path.h{fill:none;stroke:transparent;stroke-width:16;cursor:pointer}
+.big{padding:12px 20px;font-size:1.05rem}.m{color:var(--m);font-size:.9rem}.scroll{overflow:auto}
+table{border-collapse:collapse;margin:8px 0}th,td{border:1px solid #cbd5e1;padding:4px 10px;text-align:center;font-size:.92rem}th{background:#e8eefb}
+.ph{margin:10px 4px}.exp{background:#fff;border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 6px #0002}.exp svg{max-width:100%;height:auto;border-radius:8px;background-color:#0e2a22}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}.grid .card{margin:0}.pinsvg{max-width:100%;height:auto}.pinsvg text{font:11px system-ui;fill:#17233c}.pinsvg .n{fill:#fff;font-size:10px}
+details{border-bottom:1px solid #e2e8f0;padding:6px 0}summary{cursor:pointer;font-weight:600}
+footer{text-align:center;padding:16px 10px;font-size:.85rem;color:#fff;background:var(--p);margin-top:16px}
+@media(max-width:600px){.brand b{font-size:.9rem}.wrap{height:calc(100vh - 300px)}}
+@media print{.top,footer,section>button{display:none}}
+@media(max-width:600px){main{padding:6px}.dev{font-size:.8rem}.top{padding:6px 10px}nav a{padding:5px 9px}.brand img{width:34px;height:34px}.card{padding:12px}}

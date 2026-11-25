@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Md. Sohanur Rahman">
+<meta name="description" content="Presidency University DLD Virtual Lab — practise digital logic design experiments on a virtual trainer board. Developed by Md. Sohanur Rahman.">
+<title>Presidency University DLD Virtual Lab</title>
+<link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="top"><a class="brand" href="#board"><img src="assets/logo.png" alt="Presidency University logo"><span><b>Presidency University DLD Virtual Lab</b><small>Presidency University</small></span></a>
+<nav><a href="#board">Board</a><a href="#sheet" class="pill">Lab sheet</a><a href="#experiments">Experiments</a><a href="#ics">ICs</a><a href="#help">Help</a></nav></header>
+<main>
+<section id="board" class="view">
+<div class="dev"><img src="assets/logo.png" alt=""><span>Developed and maintained by <b>Md. Sohanur Rahman</b> · ID 2521720044</span></div>
+<div class="tabs"><button data-p="panel" class="on">Panel</button><button data-p="guide">Guide</button><button data-p="signals">Signals</button><button data-p="power">Power</button></div>
+<div id="hint" class="hint">Turn your phone sideways for a bigger board, or pinch to zoom in. <button id="hx" aria-label="Close">×</button></div>
+<div id="p-panel" class="pane on">
+<div class="palette" id="palette"></div>
+<div class="tools"><button id="zin">＋</button><button id="zout">－</button><button id="del">Delete selected</button><button id="clr">Clear board</button><span id="status"></span></div>
+<div class="wrap"><svg id="svg" viewBox="0 0 1200 700" width="1200" height="700"></svg></div></div>
+<div id="p-guide" class="pane card"><h2>Guide</h2><ol>
+<li>Tap a part in the palette to place it on the board (switches, LEDs, +5V, GND, gates, ICs).</li>
+<li><b>Drag</b> a part by its body to move it.</li>
+<li><b>Wire:</b> tap an output pin (right side), then tap an input pin — or drag from one pin to another. Tap a wire to select it.</li>
+<li><b>Switch:</b> tap a switch to flip it 0 ↔ 1. LEDs light up when their input is 1.</li>
+<li><b>ICs:</b> connect +5V to pin 14 (VCC) and GND to pin 7, otherwise the IC stays dead — like real hardware.</li>
+<li><b>Delete:</b> select a part or wire, then press <i>Delete selected</i> (or the Delete key).</li>
+<li>Use <b>Experiments</b> → <i>Open on board</i> to load a ready-made circuit.</li></ol>
+<p class="m">Pin colours: green = logic 1, grey = logic 0. Unconnected inputs read as 0.</p></div>
+<div id="p-signals" class="pane card"><h2>Signals</h2><div class="scroll"><table id="sigtbl"></table></div></div>
+<div id="p-power" class="pane card"><h2>Power</h2><p>Trainer board supply: <b id="ptxt">ON</b></p><button id="pwr" class="big">Turn power OFF</button>
+<p class="m">With power OFF all switches, gates and ICs output 0 and LEDs stay dark. ICs additionally need +5V on pin 14 and GND on pin 7.</p></div>
+</section>
+<section id="sheet" class="view card" hidden><h2>Lab Sheet</h2>
+<p><b>Course:</b> Digital Logic Design Laboratory · <b>University:</b> Presidency University</p>
+<p><b>Prepared by:</b> Md. Sohanur Rahman · <b>Student ID:</b> 2521720044</p>
+<h3>Objectives</h3><ul><li>Verify the truth tables of basic and universal logic gates.</li><li>Build combinational circuits (half adder, full adder) and a simple latch.</li><li>Identify TTL ICs and their pin configuration.</li></ul>
+<h3>Lab rules</h3><ul><li>Read the experiment before starting the virtual board.</li><li>Always wire VCC (pin 14) and GND (pin 7) of an IC.</li><li>Record every observation in your lab notebook.</li></ul>
+<h3>Report format</h3><ol><li>Experiment number, title and date</li><li>Aim and apparatus</li><li>Circuit diagram</li><li>Truth table (observed)</li><li>Discussion and conclusion</li></ol>
+<h3>Experiment index</h3><ol id="sheetIdx"></ol><button onclick="print()">Print lab sheet</button></section>
+<section id="experiments" class="view" hidden><h2 class="ph">Experiments</h2><div id="expList"></div></section>
+<section id="ics" class="view" hidden><h2 class="ph">ICs &amp; Pin Configurations</h2><div id="icList" class="grid"></div></section>
+<section id="help" class="view card" hidden><h2>Help</h2>
+<details open><summary>How do I connect two pins?</summary><p>Tap the first pin (it gets a yellow ring) then tap the second pin. You can also drag between pins.</p></details>
+<details><summary>My IC does nothing</summary><p>Connect a +5V part to pin 14 and a GND part to pin 7 of the IC, and make sure board power is ON.</p></details>
+<details><summary>How do I remove a wire or part?</summary><p>Select it and press <i>Delete selected</i>.</p></details>
+<details><summary>Does it work offline / on GitHub Pages?</summary><p>Yes. It is plain HTML, CSS and JavaScript with no backend.</p></details>
+<details><summary>Simulation model</summary><p>Wires merge pins into nets; each net is driven by output pins (OR-ed). Gates are re-evaluated until the circuit settles, so latches hold their state.</p></details>
+<h3>About</h3><p>Presidency University DLD Virtual Lab · Developed and maintained by <b>Md. Sohanur Rahman</b> (Student ID 2521720044).</p></section>
+</main>
+<footer>© 2026 Presidency University DLD Virtual Lab · Developed and maintained by <b>Md. Sohanur Rahman</b> · Student ID: 2521720044</footer>
+<script src="js/data.js"></script><script src="js/lab.js"></script></body></html>
